@@ -8,90 +8,39 @@
   <link rel="icon" href="https://raw.githubusercontent.com/ton21-official/ton21_official/main/logo.png"/>
   <style>
     :root {
-      --bg:#0b0f16;
-      --panel:#111724;
-      --gold1:#ffdf88;
-      --gold2:#f0cf6d;
-      --txt:#e8ecf7;
+      --bg:#0b0f16; --panel:#111724;
+      --gold1:#ffdf88; --gold2:#f0cf6d; --txt:#e8ecf7;
     }
-    body {
-      background: var(--bg);
-      color: var(--txt);
-      font-family: "Inter", system-ui, sans-serif;
-      margin: 0;
-      text-align: center;
-    }
-    .header { margin-top: 25px; }
-    .logo {
-      width: 100px; height: 100px; border-radius: 50%;
-      box-shadow: 0 0 25px var(--gold2);
-    }
-    h1 { color: var(--gold1); margin: 10px 0; }
+    body { background:var(--bg); color:var(--txt); font-family:"Inter",system-ui,sans-serif; margin:0; text-align:center; }
+    .header { margin-top:25px; }
+    .logo { width:100px; height:100px; border-radius:50%; box-shadow:0 0 25px var(--gold2); }
+    h1 { color:var(--gold1); margin:10px 0; }
     .desc { color:#9fa8b7; font-size:1em; margin-bottom:20px; }
-    .tabs {
-      display:flex; justify-content:center; flex-wrap:wrap;
-      gap:8px; margin:20px auto;
-    }
+    .tabs { display:flex; justify-content:center; flex-wrap:wrap; gap:8px; margin:20px auto; }
     .tab-btn {
-      border:1px solid var(--gold2);
-      color:var(--gold1);
-      background:transparent;
-      border-radius:10px;
-      font-weight:600;
-      padding:8px 14px;
-      cursor:pointer;
-      transition:0.2s;
+      border:1px solid var(--gold2); color:var(--gold1); background:transparent;
+      border-radius:10px; font-weight:600; padding:8px 14px; cursor:pointer; transition:0.2s;
     }
-    .tab-btn.active {
-      background:linear-gradient(90deg,var(--gold1),var(--gold2));
-      color:#000;
-    }
+    .tab-btn.active { background:linear-gradient(90deg,var(--gold1),var(--gold2)); color:#000; }
     .section {
-      display:none;
-      background:var(--panel);
-      border:1px solid var(--gold2);
-      border-radius:14px;
-      width:85%;
-      max-width:480px;
-      margin:15px auto;
-      padding:20px;
-      text-align:left;
+      display:none; background:var(--panel); border:1px solid var(--gold2);
+      border-radius:14px; width:85%; max-width:480px; margin:15px auto; padding:20px; text-align:left;
     }
     .section.active { display:block; }
     h2 { color:var(--gold1); margin-bottom:10px; }
     p, li { color:#d9deea; font-size:0.95em; line-height:1.6; }
     .btn {
-      display:inline-block;
-      background:linear-gradient(90deg,var(--gold1),var(--gold2));
-      color:#000;
-      font-weight:600;
-      border-radius:10px;
-      text-decoration:none;
-      padding:10px 20px;
-      margin:10px 5px;
-      transition:0.25s;
+      display:inline-block; background:linear-gradient(90deg,var(--gold1),var(--gold2)); color:#000;
+      font-weight:600; border-radius:10px; text-decoration:none; padding:10px 20px; margin:10px 5px; transition:0.25s;
     }
     .btn:hover { opacity:0.85; transform:translateY(-2px); }
     .lang-box { margin-top:25px; }
     .lang-btn {
-      border:1px solid var(--gold2);
-      color:var(--gold1);
-      background:transparent;
-      padding:6px 12px;
-      border-radius:8px;
-      margin:0 4px;
-      cursor:pointer;
-      font-weight:600;
+      border:1px solid var(--gold2); color:var(--gold1); background:transparent;
+      padding:6px 12px; border-radius:8px; margin:0 4px; cursor:pointer; font-weight:600;
     }
-    .lang-btn.active {
-      background:linear-gradient(90deg,var(--gold1),var(--gold2));
-      color:#000;
-    }
-    footer {
-      color:#8f97a6;
-      font-size:0.85em;
-      margin:40px 0 25px;
-    }
+    .lang-btn.active { background:linear-gradient(90deg,var(--gold1),var(--gold2)); color:#000; }
+    footer { color:#8f97a6; font-size:0.85em; margin:40px 0 25px; }
     footer a { color:var(--gold2); text-decoration:none; }
   </style>
 </head>
@@ -111,30 +60,30 @@
   </div>
 
   <div id="mission" class="section active">
-    <h2>⚔️ Mission Airdrop (Raid Contest)</h2>
-    <p>
+    <h2 id="mTitle">⚔️ Mission Airdrop (Raid Contest)</h2>
+    <p id="mText">
       ✅ Format: Manual verification<br>
       ✅ Reward: <b>100 T21 per task</b><br>
       ✅ Period: <b>Nov 5 – Nov 30 2025</b><br>
       ✅ Platforms: Telegram (main), X (Twitter), Discord<br>
       🏁 Rules and reward logic — established.
     </p>
-    <a href="https://t.me/+2ZPGkpmReQcwZGNi" class="btn" target="_blank">📤 Submit Proof / Join</a>
+    <a href="https://t.me/+2ZPGkpmReQcwZGNi" id="mBtn" class="btn" target="_blank">📤 Submit Proof / Join</a>
   </div>
 
   <div id="meme" class="section">
-    <h2>🎭 Meme Airdrop (Meme Contest)</h2>
-    <p>
+    <h2 id="meTitle">🎭 Meme Airdrop (Meme Contest)</h2>
+    <p id="meText">
       Create memes about Ton21 & decentralization!<br>
       🏆 Best memes win 500–3000 T21 + bonus for viral posts.<br>
       📅 Contest period: Nov 5 – Nov 30 2025.
     </p>
-    <a href="https://t.me/+Uo_osMdDTEhkZTAy" class="btn" target="_blank">🎨 Submit Meme / Join</a>
+    <a href="https://t.me/+Uo_osMdDTEhkZTAy" id="meBtn" class="btn" target="_blank">🎨 Submit Meme / Join</a>
   </div>
 
   <div id="upcoming" class="section">
-    <h2>📢 Upcoming Airdrops</h2>
-    <p>
+    <h2 id="uTitle">📢 Upcoming Airdrops</h2>
+    <p id="uText">
       🌟 Next Campaign: <b>Ton21 Stats & Rewards Launch — December 2025</b><br><br>
       Stay tuned for the next community activation event!<br>
       Exclusive rewards await active Ton21 Army members 💎
@@ -142,9 +91,9 @@
   </div>
 
   <div id="portal" class="section">
-    <h2>🌐 Ton21 Portal</h2>
-    <p>The main gateway to the Ton21 Ecosystem.<br>Access Wallet, Play Zone, Stats & AI Tools in one place.</p>
-    <a href="https://t.me/Ton21PortalBot" class="btn" target="_blank">🚀 Open Mini App @Ton21PortalBot</a>
+    <h2 id="pTitle">🌐 Ton21 Portal</h2>
+    <p id="pText">The main gateway to the Ton21 Ecosystem.<br>Access Wallet, Play Zone, Stats & AI Tools in one place.</p>
+    <a href="https://t.me/Ton21PortalBot" id="pBtn" class="btn" target="_blank">🚀 Open Mini App @Ton21PortalBot</a>
   </div>
 
   <div class="lang-box">
@@ -164,17 +113,58 @@
       document.getElementById(id).classList.add('active');
     }
 
-    const text={
-      en:{title:"💎 Ton21 Airdrop Hub",desc:"Complete missions, join contests & earn T21 rewards!"},
-      ru:{title:"💎 Ton21 Airdrop Центр",desc:"Выполняй миссии, участвуй в конкурсах и зарабатывай T21!"},
-      zh:{title:"💎 Ton21 空投中心",desc:"完成任务 参与活动 赢取 T21 奖励！"},
-      hi:{title:"💎 Ton21 एयरड्रॉप हब",desc:"मिशन पूरा करें और T21 कमाएँ!"}
+    const lang = {
+      en:{
+        title:"💎 Ton21 Airdrop Hub",
+        desc:"Complete missions, join contests & earn T21 rewards!",
+        mission:["⚔️ Mission Airdrop (Raid Contest)","✅ Format: Manual verification<br>✅ Reward: <b>100 T21 per task</b><br>✅ Period: <b>Nov 5 – Nov 30 2025</b><br>✅ Platforms: Telegram (main), X (Twitter), Discord<br>🏁 Rules and reward logic — established.","📤 Submit Proof / Join"],
+        meme:["🎭 Meme Airdrop (Meme Contest)","Create memes about Ton21 & decentralization!<br>🏆 Best memes win 500–3000 T21 + bonus for viral posts.<br>📅 Contest period: Nov 5 – Nov 30 2025.","🎨 Submit Meme / Join"],
+        upcoming:["📢 Upcoming Airdrops","🌟 Next Campaign: <b>Ton21 Stats & Rewards Launch — December 2025</b><br><br>Stay tuned for the next community activation event!<br>Exclusive rewards await active Ton21 Army members 💎"],
+        portal:["🌐 Ton21 Portal","The main gateway to the Ton21 Ecosystem.<br>Access Wallet, Play Zone, Stats & AI Tools in one place.","🚀 Open Mini App @Ton21PortalBot"]
+      },
+      ru:{
+        title:"💎 Ton21 Airdrop Центр",
+        desc:"Выполняй миссии, участвуй в конкурсах и зарабатывай T21!",
+        mission:["⚔️ Mission Airdrop (Raid Contest)","✅ Формат: ручная проверка<br>✅ Награда: <b>100 T21 за каждое выполнение</b><br>✅ Период: <b>5–30 ноября 2025</b><br>✅ Площадки: Telegram (главная), X (Twitter), Discord<br>🏁 Правила и логика начислений установлены.","📤 Отправить доказательство / Присоединиться"],
+        meme:["🎭 Meme Airdrop (Мем-конкурс)","Создавай мемы о Ton21 и децентрализации!<br>🏆 Лучшие мемы получают 500–3000 T21 + бонус за вирусность.<br>📅 Период конкурса: 5–30 ноября 2025.","🎨 Отправить мем / Присоединиться"],
+        upcoming:["📢 Грядущие Airdrop’ы","🌟 Следующая кампания: <b>Ton21 Stats & Rewards — декабрь 2025</b><br><br>Следи за активностями сообщества! 💎"],
+        portal:["🌐 Ton21 Portal","Главный портал экосистемы Ton21.<br>Доступ к кошельку, игре, статистике и AI-инструментам.","🚀 Открыть мини-приложение @Ton21PortalBot"]
+      },
+      zh:{
+        title:"💎 Ton21 空投中心",
+        desc:"完成任务 参与活动 赢取 T21 奖励！",
+        mission:["⚔️ Mission Airdrop (Raid Contest)","✅ 验证方式: 人工审核<br>✅ 奖励: <b>每个任务 100 T21</b><br>✅ 时间: <b>2025年11月5日–30日</b><br>✅ 平台: Telegram, X (Twitter), Discord<br>🏁 规则与奖励机制已确定。","📤 提交证明 / 加入"],
+        meme:["🎭 Meme Airdrop (表情包竞赛)","创作关于 Ton21 和去中心化的表情包！<br>🏆 优胜者将获得 500–3000 T21 + 传播奖励。<br>📅 活动时间: 2025年11月5日–30日。","🎨 提交表情包 / 加入"],
+        upcoming:["📢 即将到来的空投","🌟 下次活动: <b>Ton21 统计与奖励 — 2025年12月</b><br><br>敬请期待更多社区活动 💎"],
+        portal:["🌐 Ton21 Portal","Ton21 生态系统的主要入口。<br>访问钱包、游戏、统计与AI工具。","🚀 打开迷你应用 @Ton21PortalBot"]
+      },
+      hi:{
+        title:"💎 Ton21 एयरड्रॉप हब",
+        desc:"मिशन पूरा करें और T21 कमाएँ!",
+        mission:["⚔️ Mission Airdrop (Raid Contest)","✅ प्रारूप: मैन्युअल सत्यापन<br>✅ इनाम: <b>प्रति कार्य 100 T21</b><br>✅ अवधि: <b>5 – 30 नवम्बर 2025</b><br>✅ प्लेटफॉर्म: Telegram, X (Twitter), Discord<br>🏁 नियम और पुरस्कार प्रणाली स्थापित।","📤 प्रमाण जमा करें / जुड़ें"],
+        meme:["🎭 Meme Airdrop (मेम प्रतियोगिता)","Ton21 और विकेंद्रीकरण पर मीम बनाएँ!<br>🏆 सर्वश्रेष्ठ मीम को 500–3000 T21 + बोनस।<br>📅 प्रतियोगिता अवधि: 5 – 30 नवम्बर 2025।","🎨 मीम जमा करें / जुड़ें"],
+        upcoming:["📢 आगामी एयरड्रॉप","🌟 अगला अभियान: <b>Ton21 आँकड़े और पुरस्कार — दिसम्बर 2025</b><br><br>नए अवसरों के लिए तैयार रहें 💎"],
+        portal:["🌐 Ton21 Portal","Ton21 पारिस्थितिकी तंत्र का मुख्य द्वार।<br>वॉलेट, प्ले ज़ोन, आँकड़े और AI टूल्स तक पहुँच।","🚀 मिनी ऐप खोलें @Ton21PortalBot"]
+      }
     };
+
     function setLang(l){
       document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
       document.querySelector(`[onclick="setLang('${l}')"]`).classList.add('active');
-      document.getElementById('title').innerText=text[l].title;
-      document.getElementById('desc').innerText=text[l].desc;
+      const d = lang[l];
+      document.getElementById('title').innerText = d.title;
+      document.getElementById('desc').innerText = d.desc;
+      document.getElementById('mTitle').innerText = d.mission[0];
+      document.getElementById('mText').innerHTML = d.mission[1];
+      document.getElementById('mBtn').innerText = d.mission[2];
+      document.getElementById('meTitle').innerText = d.meme[0];
+      document.getElementById('meText').innerHTML = d.meme[1];
+      document.getElementById('meBtn').innerText = d.meme[2];
+      document.getElementById('uTitle').innerText = d.upcoming[0];
+      document.getElementById('uText').innerHTML = d.upcoming[1];
+      document.getElementById('pTitle').innerText = d.portal[0];
+      document.getElementById('pText').innerHTML = d.portal[1];
+      document.getElementById('pBtn').innerText = d.portal[2];
     }
   </script>
 </body>
